@@ -1,0 +1,164 @@
+:root {
+  --bg: #fbf8ff;
+  --surface: #f1eefa;
+  --text: #1b1b21;
+  --muted: #5d5e6c;
+  --primary: #3558e6;
+  --primary-soft: #dfe1ff;
+  --border: #e2e0ec;
+  --coupang: #e4312b;
+  --naver: #03a94f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131318;
+    --surface: #1f1f26;
+    --text: #e5e1ea;
+    --muted: #a8a7b6;
+    --primary: #b9c3ff;
+    --primary-soft: #2c3a78;
+    --border: #34333d;
+    --coupang: #ff6b63;
+    --naver: #3ddc84;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+a { color: var(--primary); }
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header.site {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+header.site .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+.brand {
+  white-space: nowrap;
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 14px;
+  white-space: nowrap;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav a:hover { color: var(--text); }
+
+.hero { padding: 64px 0 40px; }
+
+.hero .tag {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 6vw, 44px);
+  line-height: 1.3;
+  margin: 16px 0 12px;
+  letter-spacing: -0.02em;
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.mall { font-weight: 800; }
+.mall.coupang { color: var(--coupang); }
+.mall.naver { color: var(--naver); }
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+  padding: 8px 0 48px;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+section h2 {
+  font-size: 22px;
+  margin: 40px 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.doc h1 { font-size: 28px; margin: 48px 0 8px; }
+.doc h2 { font-size: 19px; margin: 36px 0 8px; }
+.doc p, .doc li { color: var(--text); }
+.doc .meta { color: var(--muted); font-size: 14px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  margin: 8px 0;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+
+.table-scroll { overflow-x: auto; }
+
+footer {
+  margin-top: 64px;
+  padding: 28px 0 48px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 14px;
+}
